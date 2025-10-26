@@ -96,7 +96,7 @@ export default function LandingPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Do you want to connect your business to ChatGPT? Please leave your email below"
+                  placeholder="Please leave your email"
                   className="flex-1 bg-transparent px-4 py-3 outline-none placeholder:opacity-60"
                   aria-required
                 />
