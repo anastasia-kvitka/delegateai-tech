@@ -1,18 +1,4 @@
 "use client";
-/*
-DelegateAI Landing Page (single-file React component)
-Stack: React + Tailwind CSS
-
-How to use:
-1. Create a React app (Vite or Create React App).
-2. Install Tailwind CSS (follow Tailwind docs).
-3. Optionally install framer-motion for subtle animations: `npm i framer-motion`
-4. Save this file as `LandingPage.jsx` and import it in your App.
-
-This component is self-contained and focuses on a short, loud hero with a single email capture form.
-The form performs client-side email validation and shows a success state. Replace `onSubmit` handler
-with your API endpoint when ready.
-*/
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
