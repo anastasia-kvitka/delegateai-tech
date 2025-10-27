@@ -13,23 +13,31 @@ export default function LandingPage() {
     return re.test(e);
   }
 
-  async function handleSubmit(ev: { preventDefault: () => void }) {
-    ev.preventDefault();
-    setError("");
-    if (!validateEmail(email)) {
-      setError("Please enter a valid business email.");
-      return;
-    }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    console.log("Submitting email:", email);
 
-    setStatus("sending");
     try {
-      await new Promise((res) => setTimeout(res, 900));
-      setStatus("success");
-    } catch (e) {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        console.log("Email submitted successfully");
+      } else {
+        const err = await res.text();
+        setStatus("error");
+        console.error("Server error:", err);
+      }
+    } catch (error) {
+      console.error("Network error:", error);
       setStatus("error");
-      setError("Something went wrong — please try again.");
     }
-  }
+  };
 
   return (
     <div className="w-screen min-h-screen bg-linear-to-b from-black via-slate-900 to-[#041023] text-white flex flex-col overflow-x-hidden">
