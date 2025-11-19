@@ -51,11 +51,6 @@ export default function LandingPage() {
             DelegateAI
           </div>
         </div>
-        <nav className="text-sm opacity-80">
-          <a href="#contact" className="hover:underline">
-            Contact
-          </a>
-        </nav>
       </header>
 
       {/* Hero */}
@@ -80,7 +75,7 @@ export default function LandingPage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mt-6 text-lg sm:text-xl opacity-80 max-w-2xl mx-auto"
           >
-            Connect your business systems to ChatGPT via secure MSP servers —
+            Connect your business systems to ChatGPT via secure MCP servers —
             automate support, emails, workflows, and more without writing a
             single line of code.
           </motion.p>
@@ -146,7 +141,7 @@ export default function LandingPage() {
             <div className="p-4 bg-slate-800/40 rounded-lg">
               <div className="font-semibold">Instant Integration</div>
               <div className="mt-1 opacity-70">
-                Connect via MSP — minutes, not weeks.
+                Connect via MCP — minutes, not weeks.
               </div>
             </div>
             <div className="p-4 bg-slate-800/40 rounded-lg">
